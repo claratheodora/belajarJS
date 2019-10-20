@@ -1,3 +1,5 @@
+import { isTSAnyKeyword } from "@babel/types";
+
 let students = [{
         name: 'Yoan',
         university: 'UMN'
@@ -20,14 +22,4 @@ function pluck(arrayOfObject, propertyName) {
     return temp;
 }
 
-let names = pluck(students, 'name');
-
-console.log(
-    pluck(students, 'name'),
-    ['Yoan', 'Agata', 'Yosua']
-);
-
-console.log(
-    pluck(students, 'university'),
-    ['UMN', 'UMN', 'Surya']
-);
+export default pluck;
